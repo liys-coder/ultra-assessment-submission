@@ -1,0 +1,63 @@
+{
+  "scope": "Original vehicle.glb, 960x720, 45 deg vertical FOV, 30 fps. Evaluation visibility: front normal within 75 deg, all corners in image. Image-only detector; best image score chooses one target per frame. No predicted frames count as detections.",
+  "scenarios": [
+    {
+      "scenario": "translation",
+      "frames": 360,
+      "matched_target_frames": 360,
+      "frame_detection_rate_pct": 100.0,
+      "longest_continuous_lost_frames": 0,
+      "false_positive_detections": 0,
+      "eligible_plate_instances": 360,
+      "matched_plate_instances": 360,
+      "plate_recall_pct": 100.0,
+      "distance_mean_error_m": 0.008287473077431395,
+      "distance_p95_error_m": 0.021296440518795423,
+      "distance_max_error_m": 0.03215260696625011,
+      "all_candidates_distance_max_error_m": 0.03215260696625011,
+      "passes_distance": true,
+      "passes_loss": true,
+      "passes_false_positives": true,
+      "pass": true
+    },
+    {
+      "scenario": "rotation",
+      "frames": 360,
+      "matched_target_frames": 360,
+      "frame_detection_rate_pct": 100.0,
+      "longest_continuous_lost_frames": 0,
+      "false_positive_detections": 0,
+      "eligible_plate_instances": 550,
+      "matched_plate_instances": 374,
+      "plate_recall_pct": 68.0,
+      "distance_mean_error_m": 0.008481931002607789,
+      "distance_p95_error_m": 0.01471096808715111,
+      "distance_max_error_m": 0.03317736153956319,
+      "all_candidates_distance_max_error_m": 0.03317736153956319,
+      "passes_distance": true,
+      "passes_loss": true,
+      "passes_false_positives": true,
+      "pass": true
+    },
+    {
+      "scenario": "combined",
+      "frames": 360,
+      "matched_target_frames": 359,
+      "frame_detection_rate_pct": 99.72222222222223,
+      "longest_continuous_lost_frames": 1,
+      "false_positive_detections": 0,
+      "eligible_plate_instances": 549,
+      "matched_plate_instances": 370,
+      "plate_recall_pct": 67.39526411657559,
+      "distance_mean_error_m": 0.008193559088928692,
+      "distance_p95_error_m": 0.018245425339480148,
+      "distance_max_error_m": 0.026165549857647408,
+      "all_candidates_distance_max_error_m": 0.026165549857647408,
+      "passes_distance": true,
+      "passes_loss": true,
+      "passes_false_positives": true,
+      "pass": true
+    }
+  ],
+  "pass": true
+}

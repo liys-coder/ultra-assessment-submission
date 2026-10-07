@@ -1,0 +1,24 @@
+%YAML:1.0
+---
+image_width: 960
+image_height: 720
+camera_matrix: !!opencv-matrix
+   rows: 3
+   cols: 3
+   dt: d
+   data: [869.1168824543142, 0., 480, 0., 869.1168824543142, 360, 0., 0., 1.]
+distortion: !!opencv-matrix
+   rows: 1
+   cols: 5
+   dt: d
+   data: [0., 0., 0., 0., 0.]
+armor_width_m: 0.12482681233352835
+armor_height_m: 0.059746048560312265
+pattern_width_m: 0.08447632220191591
+pattern_height_m: 0.12671448330287385
+pattern_image: number-template.png
+target_offset: !!opencv-matrix
+   rows: 3
+   cols: 1
+   dt: d
+   data: [0.0010496321508383021, -0.0005396106761524962, 0.005840737487916147]

@@ -1,0 +1,70 @@
+核心代码来源：原 task2_armor 工程
+分支：assessment/optional-pnp-20261006
+提交：d35ff56dd85fff610bcfab7e564b7040af1e1cd4
+
+=== Git log ===
+d35ff56 2026-10-07 refactor: clarify optional armor detection and PnP pipeline
+c7d3f23 2026-10-06 test: record passing three-scenario PnP assessment and reproducible evidence
+9297ff4 2026-10-06 fix: recover planar pose from CAD number features and enforce acceptance checks
+a89c5b9 2026-10-06 feat: add image-only planar PnP and synchronized motion simulation
+5168607 2026-10-06 docs: explain task2 core implementation
+ebf4778 2026-10-06 chore: ignore generated verification artifacts
+cd161ca 2026-10-06 docs: add reproducible task2 evidence
+a030c97 2026-10-06 fix: reduce armor pairing false positives
+a12fd1a 2026-10-06 feat: add task2 armor processing pipeline
+
+2026-10-07 选做二代码可读性重构验证
+
+基准提交：c7d3f233da2d85baec86cf91df3507c2ba836913
+仅整理命名、格式、函数职责与注释；检测算法和数据格式保持一致。
+
+源码 SHA-256（LF 换行）：
+f57bfc5b2f9e7e3d5e4f1483519b6a54a1087b2e317297209ce7842f64e44699  CMakeLists.txt
+5bfde99389c22569ee8207b05c9e363b29cef1a37c2147055eed360a667120fa  include/optional_armor.hpp
+9a21dd2433ace94cb56cafde4fad72401a35ecaa4cd605cd7cbd4fdc4c4326eb  src/optional_armor.cpp
+a453ff9fce8250a87e0bfb801144311fad41e66a6fec02798e5158a2b24d7bf5  src/optional_main.cpp
+
+=== configure.log ===
+-- The CXX compiler identification is GNU 11.4.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found OpenCV: /usr (found version "4.5.4") found components: core imgproc highgui videoio imgcodecs calib3d video 
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/a/work/ultra-assessment/task2_armor/build-readable-20261007
+
+=== build.log ===
+[1/6] Building CXX object CMakeFiles/task2_armor.dir/src/main.cpp.o
+[2/6] Building CXX object CMakeFiles/optional_armor.dir/src/optional_main.cpp.o
+[3/6] Building CXX object CMakeFiles/task2_armor.dir/src/armor_detector.cpp.o
+[4/6] Building CXX object CMakeFiles/optional_armor.dir/src/optional_armor.cpp.o
+[5/6] Linking CXX executable task2_armor
+[6/6] Linking CXX executable optional_armor
+
+=== comparison.log ===
+translation: detection CSV byte-identical
+translation: evaluation identical after newline normalization; sampled PNGs byte-identical
+rotation: detection CSV byte-identical
+rotation: evaluation identical after newline normalization; sampled PNGs byte-identical
+combined: detection CSV byte-identical
+combined: evaluation identical after newline normalization; sampled PNGs byte-identical
+READABILITY_BASELINE_DATA_IDENTICAL
+
+=== verifier-tests.log ===
+distance: injected violation correctly rejected
+loss: injected violation correctly rejected
+false_positive: injected violation correctly rejected
+VERIFIER_NEGATIVE_TESTS_OK
+
+=== task2-regression.log ===
+frames=30
+frames_with_lights=30
+light_detection_coverage_pct=100.00
+frames_with_armors=30
+armor_detection_coverage_pct=100.00
+best_light_count=4
+best_armor_count=1
+average_processing_ms=12.76

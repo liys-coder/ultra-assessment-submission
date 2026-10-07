@@ -1,0 +1,34 @@
+%YAML:1.0
+---
+# 灰度阈值。仿真视频背景灰度约为 106，蓝色灯条约为 150。
+binary_threshold: 125
+
+# 形态学核：竖向闭运算连接灯条，小核开运算去噪。
+close_width: 3
+close_height: 7
+open_width: 3
+open_height: 3
+
+# 灯条轮廓几何筛选。
+min_contour_area: 18.0
+max_contour_area: 12000.0
+min_aspect_ratio: 2.0
+max_aspect_ratio: 18.0
+min_fill_ratio: 0.35
+max_tilt_degrees: 35.0
+
+# B-R 或 R-B 的最小均值差，用于排除白色数字和灰色背景。
+min_color_delta: 35.0
+
+# 灯条配对条件。
+min_height_ratio: 0.60
+max_angle_difference: 18.0
+max_center_y_ratio: 0.60
+min_center_x_ratio: 0.60
+max_center_x_ratio: 6.00
+
+# 配对后的号码区域验证：仿真装甲板中央存在高亮、低色差数字。
+min_number_region_gray: 135
+min_number_region_bright_ratio: 0.015
+max_armors_per_frame: 1
+
